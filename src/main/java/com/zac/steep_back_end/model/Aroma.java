@@ -1,6 +1,8 @@
 package com.zac.steep_back_end.model;
 
 import java.util.List;
+import java.util.ArrayList;
+
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -18,7 +20,12 @@ public class Aroma {
     private List<String> recipes;
 
     
-    public Aroma(){}
+    public Aroma(){
+        this.id = "undefined";
+        this.name = "undefined";
+        this.brand = new Brand();
+        this.recipes = new ArrayList<>();
+    }
     
     
     
